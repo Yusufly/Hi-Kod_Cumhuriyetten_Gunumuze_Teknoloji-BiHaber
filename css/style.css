@@ -1,33 +1,40 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins); /* Text font link */
- /* Genel */
+/* Genel */
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: 'Poppins', 'sans-serif';
+  font-family: "Poppins", "sans-serif";
   box-sizing: border-box;
+  border: 0;
+  outline: none;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Body */
 body {
   background: #fefefe;
-  height: 2000px;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 /* Header - Navbar */
 header {
   width: 100%;
   height: 80px;
-  background: #ff0000;
+  background: #d50000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
+  position: relative;
+  box-shadow: 0px 0px 20px black;
 }
 
 .logo a {
@@ -62,7 +69,7 @@ header {
 .nav-bar ul li a.active {
   color: #ff0000;
   background-color: #fefefe;
-} 
+}
 
 @media only screen and (max-width: 1320px) {
   header {
@@ -95,6 +102,7 @@ header {
     background: #ff2f2f;
     transition: 0.2s;
     overflow: hidden;
+    z-index: 13;
   }
 
   .nav-bar.active {
@@ -119,7 +127,117 @@ header {
   }
 }
 
- /* Top Scroll Button */
+/* Siha */
+.row {
+  width: 90%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3px;
+  overflow-x: hidden;
+  padding: 4rem 0;
+}
+
+.row.imgWrapper {
+  overflow: hidden;
+}
+
+.row .row.imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.row .contentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.row.contentWrapper span.textWrapper {
+  display: block;
+  font-size: 30px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.row .contentWrapper h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ff2f2f;
+  padding-bottom: 20px;
+}
+
+.row .contentWrapper p{
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 25px;
+}
+
+.row.contentWrapper a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #ff2f2f;
+  color: #fefefe;
+  padding: 15px 40px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+@media (max-width: 1200px){
+  .row {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  .row .contentWrapper {
+    padding-left: 0;
+    margin: auto;
+  }
+  .row .imgWrapper {
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    width: 90%;
+  }
+  .row .contentWrapper h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .row .contentWrapper p{
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .row.contentWrapper span.textWrapper {
+    font-size: 18px;
+  }
+  .row .contentWrapper h2 {
+    font-size: 25px;
+  }
+  
+  .row .contentWrapper p{
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .row.contentWrapper a {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* Top Scroll Button */
 .topBtn {
   background: #ff2f2f;
   position: fixed;
@@ -132,11 +250,11 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 29px;
-  color:#ffffff;
+  color: #ffffff;
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .topBtn.active {
