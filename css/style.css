@@ -62,12 +62,12 @@ header {
 }
 
 .nav-bar ul li a:hover {
-  color: #ff0000;
+  color: #d50000;
   background-color: #fefefe;
 }
 
 .nav-bar ul li a.active {
-  color: #ff0000;
+  color: #d50000;
   background-color: #fefefe;
 }
 
@@ -107,7 +107,7 @@ header {
   }
 
   .nav-bar.active {
-    height: 450px;
+    height: 350px;
   }
 
   .nav-bar ul {
@@ -128,7 +128,7 @@ header {
   }
 }
 
-/* Section */
+/* Önemli Kişiler */
 .row {
   width: 90%;
   max-width: 1170px;
@@ -145,7 +145,7 @@ header {
 }
 
 .row .imgWrapper .yuzyilpng,
-.ataturkpng {
+.ataturkpng, .siha {
   width: 35rem;
   height: 100%;
   border-radius: 10px;
@@ -225,7 +225,7 @@ header {
   }
 
   .row .imgWrapper .yuzyilpng,
-  .ataturkpng {
+  .ataturkpng, .siha {
     width: 32rem;
   }
 }
@@ -248,7 +248,7 @@ header {
   }
 
   .row .imgWrapper .yuzyilpng,
-  .ataturkpng {
+  .ataturkpng, .siha {
     width: 25rem;
   }
 }
@@ -260,13 +260,13 @@ header {
 img {
   vertical-align: middle;
 }
-/* Slideshow container */
+
 .slideshow-container {
   max-width: 80%;
   position: relative;
   margin: auto;
 }
-/* Next & previous buttons */
+
 .prev,
 .next {
   cursor: pointer;
@@ -282,18 +282,18 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-/* Position the "next button" to the right */
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-/* On hover, add a black background color with a little bit see-through */
+
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/9 vb) */
+
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -314,10 +314,9 @@ img {
 }
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #ff0000;
 }
 
-/* Fade Animasyonu */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -341,7 +340,7 @@ img {
   }
 }
 
-/* Responsive */
+
 @media only screen and (max-width: 300px) {
   .prev,
   .next,
@@ -359,7 +358,7 @@ img {
       font-size: 14px;
     }
   }
-}
+} 
 
 /* Top Scroll Button */
 .topBtn {
