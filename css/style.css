@@ -81,6 +81,7 @@ header {
     padding: 0 30px;
   }
 }
+
 @media only screen and (max-width: 900px) {
   .hamburger {
     display: block;
@@ -127,7 +128,7 @@ header {
   }
 }
 
-/* Siha */
+/* Section */
 .row {
   width: 90%;
   max-width: 1170px;
@@ -135,6 +136,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3px;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding: 4rem 0;
 }
 
@@ -142,9 +144,12 @@ header {
   overflow: hidden;
 }
 
-.row .row.imgWrapper img {
-  width: 100%;
+.row .imgWrapper .yuzyilpng,
+.ataturkpng {
+  width: 35rem;
   height: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px #888888;
   object-fit: cover;
   transition: 0.3s;
 }
@@ -175,7 +180,7 @@ header {
   padding-bottom: 20px;
 }
 
-.row .contentWrapper p{
+.row .contentWrapper p {
   font-size: 20px;
   line-height: 25px;
   padding-bottom: 25px;
@@ -192,7 +197,8 @@ header {
   user-select: none;
 }
 
-@media (max-width: 1200px){
+/* Responsive */
+@media (max-width: 1270px) {
   .row {
     grid-template-columns: 1fr;
     grid-gap: 50px;
@@ -210,30 +216,148 @@ header {
     width: 90%;
   }
   .row .contentWrapper h2 {
-    font-size: 30px;
+    font-size: 34px;
     padding-bottom: 20px;
   }
-  
-  .row .contentWrapper p{
+
+  .row .contentWrapper p {
     line-height: 24px;
+  }
+
+  .row .imgWrapper .yuzyilpng,
+  .ataturkpng {
+    width: 32rem;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   .row.contentWrapper span.textWrapper {
     font-size: 18px;
   }
   .row .contentWrapper h2 {
     font-size: 25px;
   }
-  
-  .row .contentWrapper p{
+
+  .row .contentWrapper p {
     font-size: 15px;
     line-height: 22px;
   }
   .row.contentWrapper a {
     font-size: 15px;
     padding: 10px 20px;
+  }
+
+  .row .imgWrapper .yuzyilpng,
+  .ataturkpng {
+    width: 25rem;
+  }
+}
+
+/* Slider */
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/9 vb) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fade Animasyonu */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+  @media only screen and (max-width: 500px) {
+    .prev,
+    .next,
+    .text {
+      font-size: 14px;
+    }
   }
 }
 
