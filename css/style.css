@@ -257,6 +257,12 @@ header {
   .ataturkpng, .siha {
     width: 25rem;
   }
+
+  .topBtn.active {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
 }
 
 /* Önemli Kişiler - Slider */
@@ -471,7 +477,7 @@ ul{
 }
 
 /* Responsive */
-@media(max-width: 975px){
+@media(max-width: 1270px){
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
