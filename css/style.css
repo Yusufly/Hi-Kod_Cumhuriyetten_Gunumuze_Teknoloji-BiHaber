@@ -51,7 +51,8 @@ header {
   display: flex;
 }
 
-.nav-bar ul li a {
+.nav-bar ul li button {
+  background: #d50000 ;
   display: block;
   color: #fefefe;
   font-size: 20px;
@@ -61,16 +62,17 @@ header {
   margin: 0 5px;
 }
 
-.nav-bar ul li a:hover {
+.nav-bar ul li button:hover {
   color: #d50000;
   background-color: #fefefe;
 }
 
-.nav-bar ul li a.active {
+.nav-bar ul li button.active {
   color: #d50000;
   background-color: #fefefe;
 }
 
+/* Responsive */
 @media only screen and (max-width: 1320px) {
   header {
     padding: 0 50px;
@@ -123,12 +125,13 @@ header {
     opacity: 1;
   }
 
-  .nav-bar ul li a {
+  .nav-bar ul li button {
     margin-bottom: 12px;
+    background: #ff0000;
   }
 }
 
-/* Önemli Kişiler */
+/* Sections */
 .row {
   width: 90%;
   max-width: 1170px;
@@ -178,12 +181,14 @@ header {
   font-weight: 700;
   color: #ff2f2f;
   padding-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
 .row .contentWrapper p {
   font-size: 20px;
   line-height: 25px;
   padding-bottom: 25px;
+  transition: all 0.3s ease;
 }
 
 .row.contentWrapper a {
@@ -195,6 +200,7 @@ header {
   padding: 15px 40px;
   letter-spacing: 1px;
   user-select: none;
+  transition: all 0.3s ease;
 }
 
 /* Responsive */
@@ -253,7 +259,7 @@ header {
   }
 }
 
-/* Slider */
+/* Önemli Kişiler - Slider */
 .mySlides {
   display: none;
 }
@@ -340,7 +346,7 @@ img {
   }
 }
 
-
+/* Responsive */
 @media only screen and (max-width: 300px) {
   .prev,
   .next,
@@ -360,7 +366,7 @@ img {
   }
 } 
 
-/* Top Scroll Button */
+/* Yukarı Kaydırma Butonu */
 .topBtn {
   background: #ff2f2f;
   position: fixed;
@@ -384,4 +390,103 @@ img {
   bottom: 32px;
   pointer-events: auto;
   opacity: 1;
+}
+
+/* Footer */
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+  width: 100%;
+  left: 0;
+  right: 0;
+	background-color: #090000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  transition: all 0.3s ease;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a, button{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+  background: #090000;
+}
+.footer-col ul li a:hover, button:hover{
+	color: #ffffff;
+	padding-left: 8px;
+  background: #090000;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/* Responsive */
+@media(max-width: 975px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+
+@media(max-width: 575px) {
+  .footer-col .social-links a {
+    height: 30px;
+    width: 30px;
+  }
+  .footer-col ul li a, button{
+    font-size: 12px;
+    }
+    .footer-col h4{
+      font-size: 16px;
+  }
 }

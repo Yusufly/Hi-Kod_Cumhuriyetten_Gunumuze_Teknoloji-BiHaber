@@ -20,13 +20,14 @@
       <nav class="nav-bar">
         <ul>
           <li>
-            <a href="#" class="active">100. Yıl</a>
+            <button onclick="yuzyil()">100. Yıl</button>
           </li>
           <li>
-            <a href="#">Önemli Kişiler</a>
+            <button onclick="kisi()">Önemli Kişiler</button>
           </li>
           <li>
-            <a href="#">Teknolojik Gelişmeler</a>
+            <!-- <a href="#">Teknolojik Gelişmeler</a> -->
+            <button onclick="tekno()">Teknolojik Gelişmeler</button>
           </li>
         </ul>
       </nav>
@@ -181,7 +182,7 @@
             Türkiye'nin teknolojik gelişmede önemli bir <br> yol kat ettiğini
             göstermektedir. Türkiye, bu alandaki <br> çalışmalarını sürdürerek,
             gelişmiş ülkelerle rekabet <br> edebilecek bir konuma gelmeyi
-            hedeflemektedir. <br>Bilgi edinmek için resimlere tıklayınız.
+            hedeflemektedir. <br> <span style="color: #7d0000;">Bilgi edinmek için slaytı resimlere tıklayınız.</span>
           </p>
         </div>
       </div>
@@ -257,6 +258,39 @@
     <!-- Top Scroll Buton -->
     <a href="#" class="topBtn">▲</a>
 
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Hızlı Linkler</h4>
+            <ul>
+              <li><button onclick="yuzyil1()">100. Yıl</button></li>
+              <li><button onclick="kisi1()">Önemli Kişiler</button></li>
+              <li><button onclick="tekno1()">Teknolojik Gelişmeler</button></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Bize Ulaşın</h4>
+            <ul>
+              <li><a href="mailto: alperkaramann66@gmail.com" target="_blank">E-Mail Adresi: <br> alperkaramann66@gmail.com</a></li>
+              <li><a href="tel:05511712524">Telefon: +90 (0551) 171 25 24</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/kodluyoruz/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/kodluyoruz?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/kodluyoruz/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://tr.linkedin.com/company/kodluyoruz" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </footer>
+
     <!-- JS -->
     <script>
       hamburger = document.querySelector(".hamburger");
@@ -269,7 +303,9 @@
     <!-- JavaScript Links -->
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/scroll.js"></script>
     <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
   </body>
 </html>
 
